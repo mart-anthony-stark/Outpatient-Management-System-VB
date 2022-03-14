@@ -1,6 +1,8 @@
-bin
-ProjectName/obj
+Outpatient Management System/bin
+Outpatient Management System/obj
 *.user
 *.suo
 _ReSharper.*
 *.sln.cache
+*bin
+*obj
