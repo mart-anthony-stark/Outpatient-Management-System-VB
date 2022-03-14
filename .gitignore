@@ -1,0 +1,6 @@
+bin
+ProjectName/obj
+*.user
+*.suo
+_ReSharper.*
+*.sln.cache
