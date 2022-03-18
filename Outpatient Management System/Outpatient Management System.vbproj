@@ -72,6 +72,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Notes.Designer.vb">
+      <DependentUpon>Notes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Notes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Notes.resx">
+      <DependentUpon>Notes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
