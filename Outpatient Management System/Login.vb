@@ -1,4 +1,8 @@
-﻿Public Class Login
+﻿Imports MySql.Data.MySqlClient
+
+Public Class Login
+    Dim MysqlConn As MySqlConnection
+
     Dim uname, pass As String
     Private Sub Login_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
@@ -28,5 +32,20 @@
         MsgBox("Username: " + uname + "   Password: " + pass)
         Me.Hide()
         dashboard.Show()
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        MysqlConn = New MySqlConnection
+        MysqlConn.ConnectionString = "server=localhost;userid=root;password=;database=test_db;CharSet=utf8;"
+
+        Try
+            MysqlConn.Open()
+            MessageBox.Show("Connected to database")
+            MysqlConn.Close()
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+        End Try
     End Sub
 End Class
