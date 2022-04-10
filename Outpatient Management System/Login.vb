@@ -30,11 +30,13 @@ Public Class Login
         uname = username.Text
         pass = password.Text
         MsgBox("Username: " + uname + "   Password: " + pass)
+
         Me.Hide()
         dashboard.Show()
+
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString = "server=localhost;userid=root;password=;database=test_db;CharSet=utf8;"
 
