@@ -28,7 +28,6 @@ Partial Class Login
         Me.password = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'loginBtn
@@ -52,16 +51,20 @@ Partial Class Login
         '
         'username
         '
+        Me.username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.username.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.username.Location = New System.Drawing.Point(377, 145)
         Me.username.Name = "username"
-        Me.username.Size = New System.Drawing.Size(260, 20)
+        Me.username.Size = New System.Drawing.Size(260, 29)
         Me.username.TabIndex = 2
         '
         'password
         '
-        Me.password.Location = New System.Drawing.Point(377, 212)
+        Me.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.password.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.password.Location = New System.Drawing.Point(377, 231)
         Me.password.Name = "password"
-        Me.password.Size = New System.Drawing.Size(260, 20)
+        Me.password.Size = New System.Drawing.Size(260, 29)
         Me.password.TabIndex = 3
         '
         'Label1
@@ -80,27 +83,17 @@ Partial Class Login
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label2.Location = New System.Drawing.Point(373, 185)
+        Me.Label2.Location = New System.Drawing.Point(373, 204)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 24)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Password"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(386, 403)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(250, 39)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "CheckConnection"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(806, 518)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.password)
@@ -119,6 +112,5 @@ Partial Class Login
     Friend WithEvents password As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class
